@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;"> -->
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;">
+<meta http-equiv="Content-Security-Policy" content="default-src * gap: https://ssl.gstatic.com file:; style-src 'self' 'unsafe-inline' *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">  
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <!-- In the head of your document with your other CSS includes... -->
+        <!-- Video.js base CSS -->
+        <link href="https://unpkg.com/video.js@7/dist/video-js.min.css" rel="stylesheet" />
+        <!-- <link href="css/video-js.css" rel="stylesheet" /> -->
+        <link href="css/videojs-playlist-ui.vertical.css" rel="stylesheet">
+        
+        <!-- City -->
+        <link href="css/video-city-theme.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/snapshot.css">
+        <link rel="stylesheet" href="css/videojs-vjsdownload.css">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Device Info</title>
+        <script src="js/pusher.js"></script>
+
+        <style type="text/css">
+            .vjs-playlist {
+              width: 300px;
+            }
+        </style>
+        
+    </head>
+    <body>
+
+        <!-- <div>
+            <h1>Ajax test</h1>
+            <input type="text" id="url" value="https://192.168.115.14/five_good/public/testPHP.php" />
+            <button id="btn-url">CHECK</button>
+            <div id="ajaxResult">
+            </div>
+        </div>  -->
+    
+      <div class="main"> 
+        <div class="title"><h1>Five-Good</h1></div>
+          <div class="main-wrapper">
+
+            <section class="section section1">
+              <!-- <img src="videos/poster.jpg"> -->
+              <button id="PlayAndroid">Play</button>
+              <button id="screenCap">Screenshot</button>
+              <button id="testPHP" >Connect Device</button>
+              <img src="" id="capturedImage">
+              <div id="testResponse"></div>
+            </section>
+
+            <!--<section class="section section2">-->
+
+              <!-- <video id="five-good-video" class="video-js vjs-theme-city vjs-fluid vjs-16-9 vjs-4-3">
+                 <source src="videos/lamp.mp4" type="video/mp4" />
+                <p class="vjs-no-js">
+                  To view this video please enable JavaScript, and consider upgrading to a
+                  web browser that
+                  <a href="https://videojs.com/html5-video-support/" target="_blank"
+                    >supports HTML5 video</a
+                  >
+                </p> 
+              </video> -->
+            <!-- aspectRatio="9:16" -->
+             <!--  <div class="vjs-playlist">
+                  
+                    The contents of this element will be filled based on the
+                    currently loaded playlist
+                  
+              </div> -->
+              
+           <!-- </section> -->
+
+            <!-- <section class="section section3">
+              section 3
+            </section> -->
+            
+          </div>
+        </div>
+
+
+        <table>
+              <!-- <form method="post"> -->
+                <!-- <tr>
+                  <td><button id="testPHP" >Connect Device</button></td>
+                  <td><div id="testResponse"></div></td>
+                </tr> -->
+                <!-- <tr>
+                  <td><button id="screenCap">Screenshot</button></td>
+                </tr>
+                <tr>
+                  <td><button id="videoPlay">Video</button></td>
+                </tr>
+                <tr>
+                  <td><button id="screenCap">Bluetooth</button></td>
+                </tr> -->
+                <!-- <tr>
+                  <td><input id="macAd" disabled></td>
+                </tr> -->
+                <!-- <tr>
+                  <td><button id="screenCap">Screenshot</button></td>
+                </tr>
+                <tr>
+                  <td><img src="" id="capturedImage"></td>
+                </tr> -->
+
+                <!-- <tr><td><form class="pull-right">
+                  <input type="text" id="message" name="message" placeholder="Enter message..." autocomplete="off">
+                  <button class="btn btn-success" type="submit">test</button>
+                </form></td></tr>
+                <tr><td><div class="messages"></div></td></tr> -->
+
+
+
+
+                <!-- controls="true"
+                        preload="auto"
+                        width="640"
+                        height="264"
+                        poster="videos/lamp.mp4"
+                        autoplay="true"
+                        fullscreen="true"
+                        fluid="true" -->
+
+                <!-- <tr>
+                  <td>
+                    
+                  </td>
+                </tr> -->
+                <!-- <tr>
+                  <td><input id="device_uuid"></td>
+                </tr>
+                <tr>
+                  <td><input id="device_type"></td>
+                </tr>
+                <tr>
+                  <td><input id="ip"></td>
+                </tr>
+                <tr>
+                  <td><input id="device_hijacked_at"></td>
+                </tr>
+                <tr>
+                  <td><input id="data"></td>
+                </tr> -->
+                
+              <!-- </form> -->
+              <!-- <tr>
+                <td class="tdbold">Cordova Version</td>
+                <td><p id="version"></p></td>
+              </tr>
+              <tr>
+                <td class="tdbold">Device Model</td>
+                <td><p id="model"></p></td>
+              </tr>
+              <tr>
+                <td class="tdbold">Platfrom</td>
+                <td><p id="platform"></p></td>
+              </tr>
+              <tr>
+                  <td class="tdbold">UUID</td>
+                  <td><p id="uuid"></p></td>
+                </tr>
+                <tr>
+                  <td class="tdbold">OS Version</td>
+                  <td><p id="androidVersion"></p></td>
+                </tr>
+                <tr>
+                  <td class="tdbold">Manufacturer</td>
+                  <td><p id="manufacturer"></p></td>
+                </tr>
+                <tr>
+                  <td class="tdbold">isVirtual</td>
+                  <td><p id="isvirtual"></p></td>
+                </tr>
+                <tr>
+                  <td class="tdbold">Serial Number</td>
+                  <td><p id="serialNo"></p></td>
+                </tr> -->
+            </table>
+
+            <video id="five-good-video" class="video-js vjs-theme-city vjs-fluid vjs-16-9 vjs-4-3">
+              <source src="videos/lamp.mp4" type="video/mp4" />
+              <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank"
+                  >supports HTML5 video</a
+                >
+              </p>
+            </video>
+            <!-- aspectRatio="9:16" -->
+              <div class="vjs-playlist">
+                  
+                    The contents of this element will be filled based on the
+                    currently loaded playlist
+                  
+              </div>
+        <script src="cordova.js"></script>
+        <script src="js/jquery.min.js"></script>   
+        <script src="js/video.js"></script>
+        <script src="js/videojs-playlist.js"></script>
+        <script src="js/videojs-playlist-ui.js"></script>
+        <!-- <script src="js/snapshot.js"></script> -->
+        <script src="js/videojs-vjsdownload.js"></script>
+        <!-- <script src="js/videoplayer.js"></script> -->
+        <script src="js/index.js"></script>
+
+        <script>
+
+          // // Enable pusher logging - don't include this in production
+          // Pusher.logToConsole = true;
+
+          // var pusher = new Pusher('1cee39fda901f9b48558', {
+          //   cluster: 'ap3'
+          // });
+
+          // var channel = pusher.subscribe('five-good');
+          // channel.bind('advert', function(data) {
+          //   alert(JSON.stringify(data));
+          //   // alert(data.message);
+          //   // player.updateSrc(data.message);
+          //   var device_volume = data.device_volume;
+          //   player.src({ type: 'video/mp4', src: data.url });
+          //   // +++ Get, load and play video +++
+          // // function changeVideo() {
+          //   // Get the video object via the catalot
+          //   player.catalog.getVideo(data.message, function(error, video) {
+          //     // Load the video object into the player
+          //     player.catalog.load(video);
+          //     player.play();
+          //   });
+          // // }
+          // });
+
+        </script>
+
+        <script type="text/javascript">
+/*
+          //Receive messages
+          channel.bind('advert', function (data) {
+            $.post("https://192.168.197.14/receive", {
+              _token:  '{{csrf_token()}}',
+              message: data.message,
+            })
+             .done(function (res) {
+               $(".messages > .message").last().after(res);
+               $(document).scrollTop($(document).height());
+             });
+          });
+
+          //Broadcast messages
+          // $("#testPUSHER").submit(function (event) {
+          $("#testPUSHER").click(function (event) {
+            event.preventDefault();
+
+            $.ajax({
+              url:     "https://192.168.197.14/broadcast",
+              method:  'POST',
+              headers: {
+                'X-Socket-Id': pusher.connection.socket_id
+              },
+              data:    {
+                _token:  '{{csrf_token()}}',
+                message: $("form #message").val(),
+              }
+            }).done(function (res) {
+              $(".messages > .message").last().after(res);
+              $("form #message").val('');
+              $(document).scrollTop($(document).height());
+            });
+          });
+          */
+        </script>
+    </body>
+</html>
