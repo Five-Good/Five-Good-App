@@ -46,10 +46,10 @@
 
             <section class="section section1">
               <!-- <img src="videos/poster.jpg"> -->
-              <button id="PlayAndroid">Play</button>
+              <button id="PlayAndroid" disabled>Play</button>
               <button id="screenCap">Screenshot</button>
               <button id="testPHP" >Connect Device</button>
-              <img src="" id="capturedImage">
+              <!-- <img src="" id="capturedImage"> -->
               <div id="testResponse"></div>
             </section>
 
@@ -78,12 +78,10 @@
             <!-- <section class="section section3">
               section 3
             </section> -->
-            
-          </div>
-        </div>
 
 
-        <table>
+
+            <table>
               <!-- <form method="post"> -->
                 <!-- <tr>
                   <td><button id="testPHP" >Connect Device</button></td>
@@ -148,39 +146,54 @@
                 </tr> -->
                 
               <!-- </form> -->
-              <!-- <tr>
-                <td class="tdbold">Cordova Version</td>
+              <tr>
+                <td class="tdbold">aNother Mac ADDress:</td>
+                  <td><input id="macAd" ></td>
+              </tr>
+              <tr>
+                <td class="tdbold">Cordova Version:</td>
                 <td><p id="version"></p></td>
               </tr>
               <tr>
-                <td class="tdbold">Device Model</td>
+                <td class="tdbold">Device Model:</td>
                 <td><p id="model"></p></td>
               </tr>
               <tr>
-                <td class="tdbold">Platfrom</td>
+                <td class="tdbold">Platfrom:</td>
                 <td><p id="platform"></p></td>
               </tr>
               <tr>
-                  <td class="tdbold">UUID</td>
+                  <td class="tdbold">Device ID:</td>
                   <td><p id="uuid"></p></td>
                 </tr>
                 <tr>
-                  <td class="tdbold">OS Version</td>
+                  <td class="tdbold">OS Version:</td>
                   <td><p id="androidVersion"></p></td>
                 </tr>
                 <tr>
-                  <td class="tdbold">Manufacturer</td>
+                  <td class="tdbold">Manufacturer:</td>
                   <td><p id="manufacturer"></p></td>
                 </tr>
                 <tr>
-                  <td class="tdbold">isVirtual</td>
+                  <td class="tdbold">isVirtual:</td>
                   <td><p id="isvirtual"></p></td>
                 </tr>
                 <tr>
-                  <td class="tdbold">Serial Number</td>
+                  <td class="tdbold">Serial Number:</td>
                   <td><p id="serialNo"></p></td>
-                </tr> -->
+                </tr>
+            <tr>
+                <td class="tdbold">Mac Address:</td>
+                <td><p id="macaddress"></p></td>
+            </tr>
+            <tr>
+                <td class="tdbold">Geo:</td>
+                <td><p id="geolocation"></p></td>
+            </tr>
             </table>
+            
+          </div>
+        </div>
 
             <video id="five-good-video" class="video-js vjs-theme-city vjs-fluid vjs-16-9 vjs-4-3">
               <source src="videos/lamp.mp4" type="video/mp4" />

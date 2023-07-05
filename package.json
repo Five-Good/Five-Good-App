@@ -16,7 +16,11 @@
     "cordova-android": "^12.0.0",
     "cordova-browser": "^7.0.0",
     "cordova-custom-screenshot": "0.0.9",
+    "cordova-plugin-android-permissions": "^1.1.5",
+    "cordova-plugin-device": "^2.1.0",
     "cordova-plugin-file": "^7.0.0",
+    "cordova-plugin-geolocation": "^4.1.0",
+    "cordova-plugin-ip-mac-address": "^1.0.1",
     "cordova-plugin-media": "^6.1.0",
     "cordova-plugin-media-capture": "^4.0.0",
     "cordova-plugin-screen-orientation": "^3.0.3",
@@ -34,7 +38,13 @@
       "com.moust.cordova.videoplayer": {},
       "cordova-plugin-media-capture": {},
       "cordova-plugin-screen-orientation": {},
-      "cordova-custom-screenshot": {}
+      "cordova-custom-screenshot": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-ip-mac-address": {},
+      "cordova-plugin-android-permissions": {},
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      }
     }
   },
   "dependencies": {

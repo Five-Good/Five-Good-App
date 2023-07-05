@@ -8,7 +8,7 @@
     <icon src="www/img/five_good icon.jpg" platform="android" width="57" height="57" density="mdpi" />
     
     <platform name="android">
-        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="res/screen/android/splashscreen.xml" />
+        <preference name="AndroidWindowSplashScreenAnimatedIcon" value="www/img/five_good icon.jpg" />
         <!-- you can use any density that exists in the Android project -->
 
         <!-- <preference src="www/img/five_good icon.jpg" density="land-hdpi"/>
@@ -21,8 +21,9 @@
         <preference src="www/img/five_good icon.jpg" density="port-mdpi"/>
         <preference src="www/img/five_good icon.jpg" density="port-xhdpi"/> -->
 
-        <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/> -->
+<!--        <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+<!--        <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+<!--        <uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
         <!-- <feature name="Screenshot">
             <param name="android-package" value="org.apache.cordova.screenshot.Screenshot"/>
         </feature> -->
